@@ -26,9 +26,10 @@ class engine():
             
         except Exception as ex:
             print(f"ERROR [sneder message] {ex}")
+            return False
+        else:
 
-
-        return True
+            return True
 
     def receive_message(bot_token: str) -> dict:
         ''' receive message from bot '''
@@ -43,13 +44,18 @@ class engine():
                     "MethodList": "POST"
                     }
         
-        ## send request in receive message api
-        response = url_post(url=site_sender,data=payload)
-        
-        ## Extraction data from response
-        response = response.text
-        response = BeautifulSoup(response, "html.parser")
-        response = response.find("div", id="ResultData").text.replace("Response Content",'')
-        
-        ## return json data as dict
-        return  loads(response)
+        try:
+            ## send request in receive message api
+            response = url_post(url=site_sender,data=payload)
+            
+            ## Extraction data from response
+            response = response.text
+            response = BeautifulSoup(response, "html.parser")
+            response = response.find("div", id="ResultData").text.replace("Response Content",'')
+            
+        except Exception as ex:
+            print(f"ERROR [sneder message] {ex}")
+            return False
+        else:
+            ## return json data as dict
+            return  loads(response)
