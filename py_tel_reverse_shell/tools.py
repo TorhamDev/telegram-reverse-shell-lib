@@ -3,22 +3,26 @@ from .Engine import engine
 import platform
 import socket
 from datetime import datetime
+import time
 from requests import get
 import psutil
 
 def get_last_message(bot_token):
-    response = engine.receive_message(bot_token)
+
+    while True:
+        try:
+            time.sleep(3)
+            response = engine.receive_message(bot_token)
+            if response != False:
+                message_id = response[-1]['message']['message_id']
+                message_text = response[-1]['message']['text']
+                
+                result = {"text":message_text,"id":message_id}
+                
+                return result
+        except Exception as ex:
+            continue
     
-    if response != False:
-        message_id = response[-1]['message']['message_id']
-        message_text = response[-1]['message']['text']
-        
-        result = {"text":message_text,"id":message_id}
-        
-        return result
-    
-    else:
-        return False
 
 
 def get_size(bytes, suffix="B"):
