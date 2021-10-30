@@ -8,6 +8,7 @@
 
 <br>
 
+[![GitLicense](https://gitlicense.com/badge/TorhamDev/pybotnet)](https://gitlicense.com/license/TorhamDev/gitlicense)
 ## What is this?
 This program is a Python library that you can use to put an inverted shell connected to Telegram in any program. And control the target system from within the telegram.
 
