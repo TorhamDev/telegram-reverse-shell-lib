@@ -1,7 +1,6 @@
 autopep8==1.7.0
 beautifulsoup4==4.11.1
 bs4==0.0.1
-certifi @ file:///opt/conda/conda-bld/certifi_1655968806487/work/certifi
 charset-normalizer==2.1.1
 idna==3.3
 psutil==5.9.2

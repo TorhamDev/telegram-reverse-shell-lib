@@ -122,4 +122,10 @@ setup(
     cmdclass={
         'upload': UploadCommand,
     },
+    install_requires = [
+        "beautifulsoup4==4.11.1",
+        "bs4==0.0.1",
+        "psutil==5.9.2",
+        "requests==2.28.1",
+    ]
 )
