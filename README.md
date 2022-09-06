@@ -13,8 +13,12 @@
 This program is a Python library that you can use to put an inverted shell connected to Telegram in any program. And control the target system from within the telegram.
 
 # How does it work?
-Currently, this **Python library** cannot be installed using pip, but it can be used this way anyway.
+## Install
+```bash
+pip install Telegram-reverse-shell-lib
+```
 
+## Use telegram reverse shell
 ```python 
 # sample program
 from py_tel_reverse_shell import tel_shell
